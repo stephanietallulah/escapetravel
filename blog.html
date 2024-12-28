@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="images/android-icon-192x192.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body class="contact-page">
+
+<header>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="#" class="logo"><span>E</span>scapes</a>
+    <nav class="navbar">
+        <a href="index.html">HOME</a>
+        <a href="blog.html">BLOG</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+    </div>
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="looking for a place?">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+</header>
+
+<section class="blogs" id="blogs">
+    <div class="heading">
+        <div class="sub-header">
+            <h1>Travel Diaries</h1>
+        </div>
+    </div>
+
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="pic2.JPG" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="link">Hundred Islands</a>
+                <p>Discover paradise in the breathtaking Hundred Islands, where every island holds a story, and every moment feels timeless.</p>
+                <div class="icon">
+                    <a href="#"><i class="fas fa-clock"></i>2022</a>
+                    <a href="#"><i class="fas fa-user"></i>By Alfonso Mahinay</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="pic1.jpeg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="link">Boracay</a>
+                <p>From sunrise to sunset, Boracay is a reminder that paradise is real.</p>
+                <br>
+                <br>
+                <div class="icon">
+                    <a href="#"><i class="fas fa-clock"></i>2022</a>
+                    <a href="#"><i class="fas fa-user"></i> By Stephanie Ravelo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="pic3.JPG" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="link">Cape Bojeador Lighthouse</a>
+                <p>Endless blues and gentle waves—where the sea meets serenity.</p>
+                <br>
+                <br>
+                <div class="icon">
+                    <a href="#"><i class="fas fa-clock"></i>2019</a>
+                    <a href="#"><i class="fas fa-user"></i>By Alfonso Mahinay</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="pic4.JPG" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="link">Cape Bojeador Lighthouse</a>
+                <p>Standing tall since 1892, Cape Bojeador Lighthouse guides travelers with its timeless charm and breathtaking views of the northern seas.</p>
+                <div class="icon">
+                    <a href="#"><i class="fas fa-clock"></i>2019</a>
+                    <a href="#"><i class="fas fa-user"></i>By Alfonso Mahinay</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="pic5.JPG" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="link">Bangui Windmills</a>
+                <p>A breathtaking union of nature and innovation—Bangui Windmills in the heart of Ilocos Norte.</p>
+                <br>
+                <br>
+                <div class="icon">
+                    <a href="#"><i class="fas fa-clock"></i>2019</a>
+                    <a href="#"><i class="fas fa-user"></i>By Alfonso Mahinay</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="pic6.JPG" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="link">Goshen Resort and Hotel</a>
+                <p>A slice of Italy nestled in the heart of the Philippines. </p>
+                <br>
+                <br>
+                <div class="icon">
+                    <a href="#"><i class="fas fa-clock"></i>2019</a>
+                    <a href="#"><i class="fas fa-user"></i>By Alfonso Mahinay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const header = document.querySelector('header');
+    const navbarLinks = document.querySelectorAll('.navbar a');
+    const logo = document.querySelector('.logo');
+    const searchIcon = document.querySelector('#search-btn');
+
+    logo.style.color = 'var(--primary-color)';
+    searchIcon.style.color = 'var(--primary-color)';
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) { 
+            header.classList.add('sticky');
+            
+            navbarLinks.forEach(link => {
+                link.style.color = 'var(--text-light)';
+            });
+
+            logo.style.color = 'var(--text-light)';
+            searchIcon.style.color = 'var(--text-light)';
+        } else {
+            header.classList.remove('sticky');
+            
+            navbarLinks.forEach(link => {
+                link.style.color = 'var(--primary-color)';
+            });
+
+            logo.style.color = 'var(--primary-color)';
+            searchIcon.style.color = 'var(--primary-color)';
+        }
+    });
+</script>
+
+
+
+
+<script src="main.js"></script>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Travel. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/alyanatallulah" class="fab fa-facebook-f"></a>
+            <a href="https://www.instagram.com/alyvana_/" class="fab fa-instagram"></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

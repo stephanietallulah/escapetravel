@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="images/android-icon-192x192.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+<header>
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"><span>E</span>scapes</a>
+
+    <nav class="navbar">
+        <a href="index.html">HOME</a>
+        <a href="blog.html">BLOG</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="looking for a place?">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+</header>
+
+<div class="sub-header">
+    <h1>About Me</h1>
+</div>
+
+<section class="about-us">
+
+    <div class="row">
+        <div class="about-col">
+            <img src="me.jpg">
+        </div>
+        <div class="about-col">
+            <h1>Know more about me!</h1>
+            <p>Hi, I’m Stephanie! I love traveling and exploring new places. Whether it’s the beautiful spots in the Philippines or new adventures beyond, I’m always excited for what’s next. This blog is where I share my travel stories, images, and moments that inspire me to see the world. My goal is to inspire others to travel, explore new destinations, and create lasting memories. While the Philippines will always be home, I’m excited to see more of the world, and I’d love for you to join me on this journey.</p>
+            <br>
+            <br>
+            <p>A big thank you to Alfonso Mahinay for letting me use his amazing photos on my website—your pictures really make this blog special!</p>
+        </div>
+    </div>
+
+</section>
+
+<script>
+    const header = document.querySelector('header');
+    const navbarLinks = document.querySelectorAll('.navbar a');
+    const logo = document.querySelector('.logo');
+    const searchIcon = document.querySelector('#search-btn');
+
+    logo.style.color = 'var(primary-color-dark)';
+    searchIcon.style.color = 'var(--primary-color-dark)';
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {  
+            header.classList.add('sticky');
+            
+            navbarLinks.forEach(link => {
+                link.style.color = 'var(--text-light)';
+            });
+
+            logo.style.color = 'var(--text-light)';
+            searchIcon.style.color = 'var(--text-light)';
+        } else {
+            header.classList.remove('sticky');
+            
+            navbarLinks.forEach(link => {
+                link.style.color = 'var(--primary-color)';
+            });
+
+            logo.style.color = 'var(--primary-color)';
+            searchIcon.style.color = 'var(--primary-color)';
+        }
+    });
+</script>
+
+<script src="main.js"></script>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Travel. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/alyanatallulah" class="fab fa-facebook-f"></a>
+            <a href="https://www.instagram.com/alyvana_/" class="fab fa-instagram"></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
